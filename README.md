@@ -5,8 +5,7 @@ It is made by editing and combing 2 libraries in order to add custom views, you 
 
 public class CommonUtils {
       
-          ...
-          ...
+          
 public static SpotLightViewBuilder getGuide(final Activity activity, final View targetView, final String subHeadingText, final String usageId, final String headerText) {
         SpotLightViewBuilder spotlightView = SpotLightViewBuilder.initialize(activity);
         spotlightView.setIntroAnimationDuration(400);
@@ -30,7 +29,6 @@ public static SpotLightViewBuilder getGuide(final Activity activity, final View 
         return spotlightView;
       }
     
-    ....
    }
    
    
