@@ -3,10 +3,8 @@ It is made by editing and combing 2 libraries in order to add custom views, you 
 
 # How to use
 
-public class CommonUtils {
-
-public static SpotLightViewBuilder getGuide(final Activity activity, final View targetView, final String subHeadingText,final String usageId, final String headerText) {
-
+        public class CommonUtils {
+        public static SpotLightViewBuilder getGuide(final Activity activity, final View targetView, final String                           subHeadingText,final String usageId, final String headerText) {
         SpotLightViewBuilder spotlightView = SpotLightViewBuilder.initialize(activity);
         spotlightView.setIntroAnimationDuration(400);
         spotlightView.setRevealAnimationEnabled(true);
@@ -27,9 +25,9 @@ public static SpotLightViewBuilder getGuide(final Activity activity, final View 
         spotlightView.usageId(usageId); //UNIQUE ID
         spotlightView.show();
         return spotlightView;
-      }
+                }
     ...
-   }
+         }
    
    
    
@@ -48,3 +46,13 @@ public static SpotLightViewBuilder getGuide(final Activity activity, final View 
                 });
             }
         }, 400);
+        mPreferencesManager.resetAll();
+
+
+# Note: Always make an instance of Preference manager and reset it always when used spotlightview,E.g:
+
+        private PreferencesManager mPreferencesManager= new PreferencesManager(RFIDAndManualCheckingActivity.this);
+        
+        //After viewing spotlight
+        
+        mPreferencesManager.resetAll();
